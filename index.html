@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CryptoJS AES ve PHP</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="Assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="Assets/Template/Css/Thema.css">
+    <link rel="stylesheet" href="Assets/Template/Css/MenuDark.css">
+    <link rel="stylesheet" href="Assets/slicknav/Css/slicknaw.min.css">
+    <script src="Core/JQuery/jquery-3.1.1.min.js"></script>
+    <script src="Core/CryptoJS/sha.js"></script>
+    <script src="Core/CryptoJS/rollups/sha256.js"></script>
+    <script src="Core/CryptoJS/aes.js"></script>
+    <script src="Core/CryptoJS/aes-json-format.js"></script>
+    <script src="Assets/slicknav/Js/jquery.slicknav.min.js"></script>
+    <script src="Assets/Js/Custom.js"></script>
+
+
+
+</head>
+<body>
+<div class="container">
+    <nav class="menu-navigation-dark">
+
+        <a href="#" id="Crypto" class="selected" ><i class="fa fa-qrcode"></i><span>ENCODE</span></a>
+        <a href="#" id="DeCrypto"><i class="fa fa-puzzle-piece"></i><span>DECODE</span></a>
+        <a href="#" id="Finall"><i class="fa fa-unlock"></i><span>FINAL</span></a>
+
+    </nav>
+
+
+    <div class="signup-form-container">
+
+        <div class="page" id="Crypto-page">
+            <div class="form-header">
+                <h3 class="form-title"><i class="fa fa-user"></i> CryptoJS AES ve PHP</h3>
+
+                <div class="pull-right">
+                    <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
+                </div>
+
+            </div>
+
+            <div class="form-body">
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-qrcode"></span></div>
+                        <textarea class="form-control" name="CryptoData" placeholder="Şifrelenecek metin!!">WadFor Strateji</textarea>
+                    </div>
+                    <span class="help-block" id="error"></span>
+                </div>
+
+
+            </div>
+
+            <div class="form-footer">
+                <button id="CrytoButton" class="btn btn-info">
+                    <span class="glyphicon glyphicon-log-in"></span> ŞİFRELE
+                </button>
+            </div>
+        </div>
+
+        <div class="page" id="DeCrypto-page" style="display: none;">
+            <div class="form-header">
+                <h3 class="form-title"><i class="fa fa-user"></i> DECryptoJS AES ve PHP</h3>
+
+                <div class="pull-right">
+                    <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
+                </div>
+
+            </div>
+
+            <div class="form-body">
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                        <input class="form-control" name="password" placeholder="Parola !!"/>
+                    </div>
+                    <span class="help-block" id="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-qrcode"></span></div>
+                        <textarea class="form-control" type="text" name="DeCryptoData" placeholder="Şifrelenecek metin!!"></textarea>
+                    </div>
+                    <span class="help-block" id="error"></span>
+                </div>
+
+
+            </div>
+
+            <div class="form-footer">
+                <button id="DeCrytoButton" class="btn btn-info">
+                    <span class="glyphicon glyphicon-log-in"></span> ÇÖZ
+                </button>
+
+                <button id="DeCrytoButtonJs" class="btn btn-info">
+                    <span class="glyphicon glyphicon-log-in"></span> ÇÖZJS
+                </button>
+
+
+            </div>
+        </div>
+
+        <div class="page" id="Finall-page" style="display: none;">
+
+            <div class="form-header">
+                <h3 class="form-title"><i class="fa fa-user"></i> Final AES ve PHP</h3>
+
+                <div class="pull-right">
+                    <h3 class="form-title"><span class="glyphicon glyphicon-pencil"></span></h3>
+                </div>
+
+            </div>
+
+            <div class="form-body">
+
+
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-ok"></span></div>
+                        <textarea class="form-control" name="FinallCryptoData" placeholder="Sonuç metin!!" disabled></textarea>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
